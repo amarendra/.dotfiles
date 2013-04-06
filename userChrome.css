@@ -6,3 +6,5 @@
 
 /* Never show "Bookmark This Link" when right clicking*/
 #context-bookmarklink {display: none !important;}
+
+/*todo: move tabs to Mac Firefox title bar(waste of browser real estate)*/

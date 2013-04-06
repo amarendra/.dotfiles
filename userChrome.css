@@ -1,0 +1,8 @@
+/* Never show “Open in New Window” when right clicking */
+#context-openlink {display: none !important;}
+
+/* Never show “Open in New Private Window” when right clicking */
+#context-openlinkprivate {display: none !important;}
+
+/* Never show "Bookmark This Link" when right clicking*/
+#context-bookmarklink {display: none !important;}

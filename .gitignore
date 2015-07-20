@@ -1,0 +1,9 @@
+# picked from .vimperator repo
+
+!.vimperatorrc
+!.gitignore
+
+# picked form .vim repo
+
+bundle
+.netrwhist

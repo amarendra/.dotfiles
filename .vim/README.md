@@ -1,4 +1,4 @@
-.VIM Installation:
+Installation:
 =============
 
 
@@ -22,5 +22,4 @@ Install Vim plugins, listed in .vimrc, using Vundle:
 More on Vundle:
 
     :h vundle
-
 

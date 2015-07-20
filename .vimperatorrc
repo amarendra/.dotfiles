@@ -1,0 +1,8 @@
+"On Mac external editor will be MacVim
+
+editor=/bin/bash -lc "mvim -f \$*" mvim
+
+"make X clsoe the tabs and release d
+
+noremap x d
+map d <Nop>

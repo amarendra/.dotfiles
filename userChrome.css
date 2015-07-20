@@ -1,3 +1,6 @@
+/* Create chrome folder in profile folder and then put this file there:
+ * /Users/amar/Library/Application Support/Firefox/Profiles/<profile.name>/chrome */
+
 /* Never show “Open in New Window” when right clicking */
 #context-openlink {display: none !important;}
 

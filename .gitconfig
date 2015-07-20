@@ -1,0 +1,57 @@
+[user]
+	email = er.amar@gmail.com
+	name = amar
+[core]
+	excludesfile = /Users/amar/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+    default = nothing
+
+[difftool "kdiff3"]
+    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    trustExitCode = false
+[difftool]
+    prompt = false
+[diff]
+    tool = kdiff3
+[mergetool "kdiff3"]
+    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    trustExitCode = false
+[mergetool]
+    keepBackup = false
+[merge]
+    tool = kdiff3
+[credential]
+    helper = osxkeychain
+
+[alias]
+    g = git
+    gst = git status
+    gs = git status -s
+    ga = git add
+    gaa = git add --all
+    gapa = git add --patch
+    gb = git branch
+    gba = git branch -a
+    gbr = git branch --remote
+    gc = git checkout
+    gca = git commit -v --amend
+    gcl = git clone
+    gm = git merge
+    grh = git reset HEAD
+    gpr = git pull --rebase
+    gpo = git push origin
+    gfo = git fetch origin
+    gcm = git commit -m
+    gci = git commit --interactive
+    gco = git checkout
+    gdel = git branch -D
+    gl = git log
+    glog = git log --graph --pretty=oneline --abbrev-commit
+    gr = git remote -v
+    gui = git gui citool

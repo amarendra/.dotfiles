@@ -2,7 +2,7 @@
 	email = er.amar@gmail.com
 	name = amar
 [core]
-	excludesfile = /Users/amar/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

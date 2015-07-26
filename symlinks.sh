@@ -36,3 +36,9 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/$file
 done
+
+## make some other symlinks
+
+#Firefox RES
+
+ln -s ~/Dropbox/Config/Firefox/RES/current/store.json ~/Library/Application\ Support/Firefox/Profiles/*.default/jetpack/jid1-xUfzOsOFlzSOXg@jetpack/simple-storage/store.json

@@ -24,7 +24,7 @@ alias topc='top -o cpu'
 alias ltop='top -F -R -o cpu'
 
 # git aliases 
-# alias g='git'
+  alias g='git'
 # alias gst='git status'
 # alias gs='git status -s'
 # alias ga='git add'

@@ -30,28 +30,28 @@
     helper = osxkeychain
 
 [alias]
-    g = git
-    gst = git status
-    gs = git status -s
-    ga = git add
-    gaa = git add --all
-    gapa = git add --patch
-    gb = git branch
-    gba = git branch -a
-    gbr = git branch --remote
-    gc = git checkout
-    gca = git commit -v --amend
-    gcl = git clone
-    gm = git merge
-    grh = git reset HEAD
-    gpr = git pull --rebase
-    gpo = git push origin
-    gfo = git fetch origin
-    gcm = git commit -m
-    gci = git commit --interactive
-    gco = git checkout
-    gdel = git branch -D
-    gl = git log
-    glog = git log --graph --pretty=oneline --abbrev-commit
-    gr = git remote -v
-    gui = git gui citool
+    st = status
+    s = status -s
+    d = diff
+    a = add
+    aa = add --all
+    apa = add --patch
+    b = branch
+    ba = branch -a
+    br = branch --remote
+    c = checkout
+    ca = commit -v --amend
+    cl = clone
+    m = merge
+    rh = reset HEAD
+    pr = pull --rebase
+    po = push origin
+    fo = fetch origin
+    cm = commit -m
+    ci = commit --interactive
+    co = checkout
+    del = branch -D
+    l = log
+    log = log --graph --pretty=oneline --abbrev-commit
+    r = remote -v
+    ui = gui citool

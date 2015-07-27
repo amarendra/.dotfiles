@@ -12,7 +12,7 @@ alias reload="exec $SHELL -l" #reload shell
 # cd
 alias ..="cd .."
 alias ...="cd .. ; cd .."
-alias \-="cd -"
+#alias \-="cd -"
 alias work="cd ~/workspace"
 
 # away from keyboard

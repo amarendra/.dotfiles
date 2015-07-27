@@ -32,26 +32,56 @@
 [alias]
     st = status
     s = status -s
+
     d = diff
+    ds = diff --stat
+    dc = diff --cached
+    dlc = diff --cached HEAD^   #diff last commit
+    
     a = add
     aa = add --all
     apa = add --patch
+    
     b = branch
     ba = branch -a
     br = branch --remote
+    del = branch -D    
+    
     c = checkout
+    cb = checkout -b
+    
     ca = commit -v --amend
     cl = clone
+    
     m = merge
+    
     rh = reset HEAD
+    uc = reset --soft HEAD~1        #undo commit    
+    
     pr = pull --rebase
+    
     po = push origin
+    
     fo = fetch origin
+    
     cm = commit -m
+    cv = commit --verbose
+    cam = commit -a --verbose
+    cav = commit -a --verbose
     ci = commit --interactive
-    co = checkout
-    del = branch -D
+    
     l = log
     log = log --graph --pretty=oneline --abbrev-commit
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    fl = log -u
+    
+    f = "!git ls-files | grep -i"    # find a file path in git codebase
+
+    gr = grep -Ii       #search grep entire codebase for a string
+    
     r = remote -v
+
     ui = gui citool
+    
+    la = "!git config -l | grep alias | cut -c 7-"      #list aliases

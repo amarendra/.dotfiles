@@ -4,6 +4,8 @@ export LSCOLORS=ExFxDxCxegedabagacad
 export PS1="\u@\h\$"
 PS1="\[\e[1;32m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]:\[\e[34m\]\W\[\e[0m\]$ "
 
+export PS1="$PS1\$(git-radar --bash --fetch)"
+
 # aliases
 alias ls="ls -hGFp"
 alias p="pwd"
@@ -35,7 +37,7 @@ complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
 alias bcup="brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup"
 
 # export
-export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # run bash completition script

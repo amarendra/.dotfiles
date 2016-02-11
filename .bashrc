@@ -26,6 +26,9 @@ alias ltop='top -F -R -o cpu'
 # git aliase
 alias g='git'
 
+# subtitles
+alias sub='subliminal download -l en'
+
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
 complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
@@ -35,6 +38,7 @@ complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
 alias bcup="brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup"
 
 # export
+export WORKON_HOME=~/.virtualenvs
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 

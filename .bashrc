@@ -4,6 +4,8 @@ export LSCOLORS=ExFxDxCxegedabagacad
 export PS1="\u@\h\$"
 PS1="\[\e[1;32m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]:\[\e[34m\]\W\[\e[0m\]$ "
 
+export PS1="$PS1\$(git-radar --bash --fetch)"
+
 # aliases
 alias ls="ls -hGFp"
 alias p="pwd"
@@ -39,7 +41,7 @@ alias bcup="brew update && brew upgrade brew-cask && brew cleanup && brew cask c
 
 # export
 export WORKON_HOME=~/.virtualenvs
-export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # run bash completition script

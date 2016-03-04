@@ -6,43 +6,27 @@ PS1="\[\e[1;32m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]:\[\e[34m\]\W\[\e[0m\]$ "
 
 export PS1="$PS1\$(git-radar --bash --fetch)"
 
-# aliases
-alias ls="ls -hGFp"
-alias p="pwd"
-alias stfu="osascript -e 'set volume output muted true'"
-alias reload="exec $SHELL -l" #reload shell
-# cd
-alias ..="cd .."
-alias ...="cd .. ; cd .."
-#alias \-="cd -"
-alias work="cd ~/workspace"
-
-# away from keyboard
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-# top
-alias topm='top -o vsize'
-alias topc='top -o cpu'
-alias ltop='top -F -R -o cpu'
-
-# git aliase
-alias g='git'
-
-# subtitles
-alias sub='subliminal download -l en'
-
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
 complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
     || complete -o default -o nospace -F _git g
 
-# homebrew
-alias bcup="brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup"
-
-# export
-export WORKON_HOME=~/.virtualenvs
-export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
 # run bash completition script
 source /usr/local/etc/bash_completion
+
+shopt -s histappend ## append, no clearouts                                                               
+shopt -s histverify ## edit a recalled history line before executing                                      
+shopt -s histreedit ## reedit a history substitution line if it failed   
+shopt -s checkwinsize ## Update window size after every command
+shopt -s cmdhist ## Save multi-line commands as one command
+#shopt -s autocd ## Prepend cd to directory names automatically #todo
+shopt -s dirspell ## Correct spelling errors during tab-completion
+shopt -s cdspell ## Correct spelling errors in arguments supplied to cd
+
+# history settings
+HISTCONTROL=ignoreboth:erasedups 
+HISTIGNORE='ls:bg:fg:history:cd ..:adb logcat:adb logcat -c:git st:git pull:git log:pwd:git fo:g fo:cd ~:clear:ls -a'
+HISTTIMEFORMAT='%F %T '
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+CDPATH=".:~:~/workspace" ## This defines where cd looks for targets

@@ -4,29 +4,23 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	compression = 0
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [push]
     default = nothing
 
-[difftool "kdiff3"]
-    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+[difftool "visdiff"]
+    path = /Applications/VisualDiffer.app/Contents/Resources/visdiff
     trustExitCode = false
 [difftool]
     prompt = false
 [diff]
-    tool = kdiff3
-[mergetool "kdiff3"]
-    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    tool = visdiff
+[mergetool "visdiff"]
+    path = /Applications/VisualDiffer.app/Contents/Resources/visdiff
     trustExitCode = false
 [mergetool]
     keepBackup = false
 [merge]
-    tool = kdiff3
+    tool = visdiff
 [credential]
     helper = osxkeychain
 
@@ -92,3 +86,6 @@
 [http]
 	postBuffer = 524288000
 	getBuffer = 157286400
+
+[github]
+	user = amarendra

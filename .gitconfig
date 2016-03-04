@@ -79,7 +79,7 @@
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
     fl = log -u
-    
+	
     f = "!git ls-files | grep -i"    # find a file path in git codebase
 
     gr = grep -Ii       #search grep entire codebase for a string

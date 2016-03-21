@@ -34,6 +34,7 @@ alias ..="cd .."
 alias ...="cd .. ; cd .."
 #alias \-="cd -"
 alias work="cd ~/workspace"
+alias ola="cd ~/workspace/ola"
 
 # top
 alias topm='top -o vsize'
@@ -48,3 +49,7 @@ alias g='git'
 
 # homebrew
 alias bcup="brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup"
+
+#editors
+alias st='open -a "Sublime Text"'
+alias tw='open -a "TextWrangler"'

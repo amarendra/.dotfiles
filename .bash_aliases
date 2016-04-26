@@ -1,3 +1,5 @@
+source ~/Dropbox/code/git-ignored/aliases
+
 alias pi='ssh pi@192.168.1.101'
 
 # git log pretty 

@@ -10,3 +10,6 @@ bundle
 .DS_Store
 *~
 *.swp
+
+# new relic
+newrelic.properties

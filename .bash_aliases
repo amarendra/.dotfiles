@@ -55,3 +55,7 @@ alias bcup="brew update && brew upgrade brew-cask && brew cleanup && brew cask c
 #editors
 alias st='open -a "Sublime Text"'
 alias tw='open -a "TextWrangler"'
+
+#file
+show=defaults write com.apple.finder AppleShowAllFiles YES && killall Finder
+hide=defaults write com.apple.finder AppleShowAllFiles NO && killall Finder

@@ -57,5 +57,5 @@ alias st='open -a "Sublime Text"'
 alias tw='open -a "TextWrangler"'
 
 #file
-show=defaults write com.apple.finder AppleShowAllFiles YES && killall Finder
-hide=defaults write com.apple.finder AppleShowAllFiles NO && killall Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"

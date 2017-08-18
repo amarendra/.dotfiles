@@ -20,7 +20,7 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 
 # lock system
-alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+alias lock='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
 
 # every profile gets reloaded
 alias refresh='source ~/.bash_profile'

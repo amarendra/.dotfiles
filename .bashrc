@@ -14,14 +14,16 @@ complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
 # run bash completition script
 source /usr/local/etc/bash_completion
 
-shopt -s histappend ## append, no clearouts                                                               
-shopt -s histverify ## edit a recalled history line before executing                                      
-shopt -s histreedit ## reedit a history substitution line if it failed   
-shopt -s checkwinsize ## Update window size after every command
-shopt -s cmdhist ## Save multi-line commands as one command
-#shopt -s autocd ## Prepend cd to directory names automatically #todo
-shopt -s dirspell ## Correct spelling errors during tab-completion
-shopt -s cdspell ## Correct spelling errors in arguments supplied to cd
+shopt -s histappend 			# append, no clearouts                                                               
+shopt -s histverify 			# edit a recalled history line before executing                                      
+shopt -s histreedit 			# reedit a history substitution line if it failed   
+shopt -s checkwinsize 			# Update window size after every command
+shopt -s cmdhist 				# Save multi-line commands as one command
+shopt -s cdspell 				# Correct spelling errors in arguments supplied to cd
+shopt -s expand_aliases 		# Expand alias names
+
+# unset options
+unset MAILCHECK
 
 # history settings
 HISTCONTROL=ignoreboth:erasedups 

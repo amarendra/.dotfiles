@@ -25,10 +25,7 @@ alias lock='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSav
 # every profile gets reloaded
 alias refresh='source ~/.bash_profile'
 
-c='clear'
-
 alias ls="ls -hGFp"
-alias p="pwd"
 alias stfu="osascript -e 'set volume output muted true'"
 alias reload="exec $SHELL -l" #reload shell
 # cd

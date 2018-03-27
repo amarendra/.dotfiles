@@ -1,6 +1,4 @@
-source ~/Dropbox/code/git-ignored/aliases
-
-alias pi='ssh pi@192.168.1.101'
+source ~/Dropbox/Config/git-ignored/aliases
 
 # git log pretty 
 alias gl='git log --date-order --all --graph --format="%C(green)%h%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s"'
@@ -28,9 +26,11 @@ alias refresh='source ~/.bash_profile'
 alias ls="ls -hGFp"
 alias stfu="osascript -e 'set volume output muted true'"
 alias reload="exec $SHELL -l" #reload shell
+
 # cd
 alias ..="cd .."
 alias ...="cd .. ; cd .."
+
 #alias \-="cd -"
 alias work="cd ~/workspace"
 alias ola="cd ~/workspace/ola"
@@ -56,3 +56,10 @@ alias tw='open -a "TextWrangler"'
 #file
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
+
+# gradle build and adb aliases
+alias gbc="./gradlew clean"
+alias gca="./gradlew clean assemble"
+alias gcsd="./gradlew clean assembleStagingDebug"
+alias grel="./gradlew clean assembleProductionRelease assembleProductionReleaseWithLogs assembleStagingDebug"
+alias add="adb devices"

@@ -4,12 +4,17 @@
 <dict>
 	<key>Label</key>
 	<string>amar.restic.maintenance</string>
+	<key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string>/bin:/usr/bin:/usr/local/bin</string>
+    </dict>
 	<key>Program</key>
 	<string>/Users/amarendra.kumar/.dotfiles/restic.maintain.sh</string>
 	<key>StandardOutPath</key>
   	<string>/Users/amarendra.kumar/.restic/log/restic.log</string>
 	<key>StandardErrorPath</key>
-	<string>/Users/amarendra.kumar/.restic/log/restic_error.log</string>
+	<string>/Users/amarendra.kumar/.restic/log/restic.log</string>
 	<key>StartCalendarInterval</key>
 	<array>
 		<dict>

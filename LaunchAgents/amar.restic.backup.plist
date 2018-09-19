@@ -4,16 +4,12 @@
 <dict>
 	<key>Label</key>
 	<string>amar.restic.backup</string>
-	<key>ProgramArguments</key>
-	<array>
-		<string>sh</string>
-		<string>-c</string>
-		<string>$HOME/.dotfiles/restic.backup.sh</string>
-	</array>
+	<key>Program</key>
+	<string>/Users/amarendra.kumar/.dotfiles/restic.backup.sh</string>
 	<key>StandardOutPath</key>
-  	<string>$HOME/.restic/log/restic.log</string>
+  	<string>/Users/amarendra.kumar/.restic/log/restic.log</string>
 	<key>StandardErrorPath</key>
-	<string>$HOME/.restic/log/restic_error.log</string>
+	<string>/Users/amarendra.kumar/.restic/log/restic_error.log</string>
 	<key>StartCalendarInterval</key>
 	<array>
 		<dict>
@@ -33,8 +29,6 @@
 			<integer>22</integer>
 		</dict>
 	</array>
-	<key>UserName</key>
-	<string>#USER</string>
 	<key>Nice</key>
   	<integer>10</integer>
 </dict>

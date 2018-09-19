@@ -6,3 +6,4 @@ export PATH="~/.virtualenvs/atticenv/bin:$PATH"
 export PATH=$PATH:/usr/local/m-cli
 export PATH=$HOME/workspace/dart/flutter/bin:$PATH
 export PATH=$HOME/sdk/android/sdk/platform-tools:$PATH
+export PATH="/usr/local/sbin:$PATH"

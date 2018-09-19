@@ -4,8 +4,6 @@ source $HOME/Dropbox/Config/git-ignored/restic/.restic.env
 
 LOG_FILE=$RESTIC_LOG_DIR/restic_maintenance.log
 
-echo "===================================================================" >> $LOG_FILE
-
 echo "RESTIC MAINTENANCE SCRIPT STARTED AT $(date -R)" >> $LOG_FILE
 
 restic --verbose forget --keep-last 10 \
@@ -13,8 +11,7 @@ restic --verbose forget --keep-last 10 \
 	--keep-weekly 5 \
 	--keep-monthly 12 \
 	--keep-yearly 3 \
-	--prune	\
-	>> $LOG_FILE
+	--prune	>> $LOG_FILE
 	
 # Checks the backup status. Once in a while run this without cache.
 echo "Running restic check...." >> $LOG_FILE
@@ -31,5 +28,7 @@ export B2_ACCOUNT_KEY=""
 export RESTIC_PASSWORD_FILE=""
 
 echo "RESTIC MAINTENANCE SCRIPT FINISHED at $(date -R)" >> $LOG_FILE
+
+echo "===================================================================" >> $LOG_FILE
 
 exit 0

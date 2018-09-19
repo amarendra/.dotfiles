@@ -11,11 +11,10 @@ echo "RESTIC BACKUP SCRIPT STARTED AT $(date -R)" >> $LOG_FILE
 restic unlock
 
 # I have decided to keep the log as I do not think for my aggressively small backup size it would affect the sppeed that much
-restic backup \
+restic --verbose backup \
 	--files-from $RESTIC_INCLUDE_FILE \
 	--exclude-caches \
-	--exclude-file=$RESTIC_EXCLUDE_FILE \
-	>> $LOG_FILE
+	--exclude-file=$RESTIC_EXCLUDE_FILE >> $LOG_FILE
 
 echo "Running restic check with cache...." >> $LOG_FILE
 restic check --with-cache >> $LOG_FILE

@@ -15,7 +15,7 @@ restic backup \
 	--files-from $RESTIC_INCLUDE_FILE \
 	--exclude-caches \
 	--exclude-file=$RESTIC_EXCLUDE_FILE \
-	>> LOG_FILE
+	>> $LOG_FILE
 
 echo "Running restic check with cache...." >> $LOG_FILE
 restic check --with-cache >> $LOG_FILE

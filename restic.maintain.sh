@@ -13,9 +13,8 @@ restic --verbose forget --keep-last 10 \
 	--keep-weekly 5 \
 	--keep-monthly 12 \
 	--keep-yearly 3 \
-	--keep-within 7d \
 	--prune	\
-	>> LOG_FILE
+	>> $LOG_FILE
 	
 # Checks the backup status. Once in a while run this without cache.
 echo "Running restic check...." >> $LOG_FILE

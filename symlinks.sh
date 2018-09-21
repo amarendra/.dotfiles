@@ -42,3 +42,7 @@ done
 #Firefox RES
 
 ln -s ~/Dropbox/Config/Firefox/RES/current/store.json ~/Library/Application\ Support/Firefox/Profiles/*.default/jetpack/jid1-xUfzOsOFlzSOXg@jetpack/simple-storage/store.json
+
+# link launch agents
+ln -s ~/.dotfiles/LaunchAgents/amar.restic.backup.plist ~/Library/LaunchAgents/amar.restic.backup.plist
+ln -s ~/.dotfiles/LaunchAgents/amar.restic.maintenance.plist ~/Library/LaunchAgents/amar.restic.maintenance.plist

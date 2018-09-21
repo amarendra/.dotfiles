@@ -19,7 +19,12 @@ brew install git
 echo "...done."
 
 echo "Installing some brew packages"
-brew install wget automake autoconf libevent openssl libmemcached ossp-uuid xz libpng pkg-config icoutils libtool qt libtiff pstree ack curl imagemagick libxml2 readline dialog jpeg memcached redis freetype lftp node tmux autojump gawk git bash-completion git-flow hub colordiff android-sdk pidcat
+brew install wget automake autoconf libevent openssl libmemcached ossp-uuid xz libpng \
+		pkg-config icoutils libtool qt libtiff pstree ack curl imagemagick libxml2 \
+		readline dialog jpeg memcached redis freetype lftp node tmux autojump gawk \
+		git bash-completion git-flow git-radar git-cola hub colordiff pidcat restic neovim \
+		syncthing ntfs-3g shallow-backup fd ccat bat nnn diff-so-fancy subliminal truncate \
+		tarsnap tarsnap-gui tldr jrnl autojump colordiff dshb hh tree 
 echo "done."
 
 echo "updating brew; cleaning up"

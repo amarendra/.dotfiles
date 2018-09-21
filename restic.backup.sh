@@ -2,7 +2,7 @@
 # sources environment varialbes including credentials
 source $HOME/Dropbox/Config/git-ignored/restic/.restic.env
 
-echo "*** RESTIC BACKUP SCRIPT STARTED AT $(date -R)" >> $RESTIC_LOG_FILE
+printf "*** RESTIC BACKUP SCRIPT STARTED AT $(date -R)\n" >> $RESTIC_LOG_FILE
 
 # regain lock if needed
 restic unlock
@@ -13,13 +13,13 @@ restic --verbose backup \
 	--exclude-caches \
 	--exclude-file=$RESTIC_EXCLUDE_FILE >> $RESTIC_LOG_FILE
 
-echo "\n\n*** Running restic check with cache...." >> $RESTIC_LOG_FILE
+printf "\n\n*** Running restic check with cache....\n" >> $RESTIC_LOG_FILE
 restic check --with-cache >> $RESTIC_LOG_FILE
 
-echo "\n\n*** Running restic stats...." >> $RESTIC_LOG_FILE
+printf "\n\n*** Running restic stats....\n" >> $RESTIC_LOG_FILE
 restic stats >> $RESTIC_LOG_FILE
 
-echo "\n*** Running restic stats for raw-data:" >> $RESTIC_LOG_FILE
+printf "\n*** Running restic stats for raw-data:\n" >> $RESTIC_LOG_FILE
 restic stats --mode raw-data >> $RESTIC_LOG_FILE
 
 # reset restic credentials
@@ -28,8 +28,8 @@ export B2_ACCOUNT_ID=""
 export B2_ACCOUNT_KEY=""
 export RESTIC_PASSWORD_FILE=""
 
-echo "\n*** RESTIC BACKUP SCRIPT FINISHED $(date -R)" >> $RESTIC_LOG_FILE
+printf "\n*** RESTIC BACKUP SCRIPT FINISHED $(date -R)\n" >> $RESTIC_LOG_FILE
 
-echo "===================================================================\n\n" >> $RESTIC_LOG_FILE
+printf "\n===================================================================\n\n\n" >> $RESTIC_LOG_FILE
 
 exit 0

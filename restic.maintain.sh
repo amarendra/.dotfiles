@@ -2,6 +2,7 @@
 # sources environment varialbes including credentials
 source $HOME/Dropbox/Config/git-ignored/restic/.restic.env
 
+osascript -e 'display notification "Started." with title "Restic" subtitle "Maintenance script"'
 printf "*** RESTIC MAINTENANCE SCRIPT STARTED AT $(date -R)\n" >> $RESTIC_LOG_FILE
 
 restic --verbose forget --keep-last 10 \
@@ -28,6 +29,7 @@ export B2_ACCOUNT_KEY=""
 export RESTIC_PASSWORD_FILE=""
 
 printf "\nRESTIC MAINTENANCE SCRIPT FINISHED at $(date -R)\n" >> $RESTIC_LOG_FILE
+osascript -e 'display notification "Finished." with title "Restic" subtitle "Maintenance script"'
 
 printf "===================================================================\n\n\n" >> $RESTIC_LOG_FILE
 

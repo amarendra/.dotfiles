@@ -2,6 +2,8 @@
 # sources environment varialbes including credentials
 source $HOME/Dropbox/Config/git-ignored/restic/.restic.env
 
+
+osascript -e 'display notification "Started." with title "Restic" subtitle "Backup script"'
 printf "*** RESTIC BACKUP SCRIPT STARTED AT $(date -R)\n" >> $RESTIC_LOG_FILE
 
 # regain lock if needed
@@ -29,6 +31,7 @@ export B2_ACCOUNT_KEY=""
 export RESTIC_PASSWORD_FILE=""
 
 printf "\n*** RESTIC BACKUP SCRIPT FINISHED $(date -R)\n" >> $RESTIC_LOG_FILE
+osascript -e 'display notification "Finished." with title "Restic" subtitle "Backup script"'
 
 printf "\n===================================================================\n\n\n" >> $RESTIC_LOG_FILE
 

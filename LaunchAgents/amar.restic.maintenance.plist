@@ -12,9 +12,9 @@
 	<key>Program</key>
 	<string>/Users/amarendra.kumar/.dotfiles/restic.maintain.sh</string>
 	<key>StandardOutPath</key>
-  	<string>/Users/amarendra.kumar/Library/Logs/restic/restic.log</string>
+  	<string>/Users/amarendra.kumar/Library/Logs/restic/restic-mla.log</string>
 	<key>StandardErrorPath</key>
-  	<string>/Users/amarendra.kumar/Library/Logs/restic/restic.log</string>
+  	<string>/Users/amarendra.kumar/Library/Logs/restic/restic-mla.log</string>
 	<key>StartCalendarInterval</key>
 	<array>
 		<dict>
@@ -23,7 +23,7 @@
 			<key>Minute</key>
 			<integer>30</integer>
 			<key>Weekday</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>Hour</key>
@@ -31,7 +31,7 @@
 			<key>Minute</key>
 			<integer>30</integer>
 			<key>Weekday</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 	</array>
 	<key>Nice</key>

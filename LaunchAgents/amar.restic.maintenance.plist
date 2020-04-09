@@ -12,9 +12,9 @@
 	<key>Program</key>
 	<string>/Users/amarendra.kumar/.dotfiles/restic.maintain.sh</string>
 	<key>StandardOutPath</key>
-  	<string>/Users/amarendra.kumar/Library/Logs/restic/restic-mla.log</string>
+  	<string>/Users/amarendra.kumar/Library/Logs/restic/restic-m-stdout.log</string>
 	<key>StandardErrorPath</key>
-  	<string>/Users/amarendra.kumar/Library/Logs/restic/restic-mla.log</string>
+  	<string>/Users/amarendra.kumar/Library/Logs/restic/restic-m-stderr.log</string>
 	<key>StartCalendarInterval</key>
 	<array>
 		<dict>

@@ -5,7 +5,9 @@ source $HOME/Dropbox/Config/git-ignored/borg/.borg.env
 # just for reference this is how we init a repo
 # borg init --encryption=MODE PATH
 
-printf "*** BORG BACKUP SCRIPT STARTED AT $(date -R)\n"
+
+osascript -e 'display notification "Started." with title "Borg" subtitle "Backup script"'
+printf "*** BORG BACKUP SCRIPT STARTED AT $(date -R)\n" >> $BORG_BCAKUP_LOG_FILE
 
 borg create -x --verbose --progress --stats --show-rc \
 	--filter AME \
@@ -20,6 +22,7 @@ export BORG_PASSCOMMAND=""
 export BORG_REMOTE_PATH=""
 export BORG_LOCAL_HOSTNAME=""
 
-printf "\n*** BORG BACKUP SCRIPT FINISHED AT $(date -R)\n\n\n"
+printf "\n*** BORG BACKUP SCRIPT FINISHED AT $(date -R)\n\n\n" >> $BORG_BCAKUP_LOG_FILE
+osascript -e 'display notification "Finished." with title "Borg" subtitle "Backup script"'
 
 exit 0

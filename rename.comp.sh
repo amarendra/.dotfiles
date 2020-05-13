@@ -1,0 +1,1 @@
+sudo sudo scutil --set HostName machine && sudo scutil --set LocalHostName machine && sudo scutil --set ComputerName machine && dscacheutil -flushcache

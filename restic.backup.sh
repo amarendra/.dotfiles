@@ -38,7 +38,7 @@ export RESTIC_PASSWORD_FILE=""
 
 successful="without any issues."
 
-if [ $unlock_exit_code -ne 0 -o $backup_exit_code-ne 0 -o $check_exit_code -ne 0 -o $stats_exit_code -ne 0 -o $stats_raw__data_exit_code -ne 0 ]; then
+if [ $unlock_exit_code -ne 0 -o $backup_exit_code -ne 0 -o $check_exit_code -ne 0 -o $stats_exit_code -ne 0 -o $stats_raw__data_exit_code -ne 0 ]; then
 	successful="with issues!!!"
 fi
 

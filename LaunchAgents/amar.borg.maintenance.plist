@@ -3,35 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>amar.restic.backup</string>
+	<string>amar.borg.maintenance</string>
 	<key>EnvironmentVariables</key>
     <dict>
       <key>PATH</key>
       <string>/bin:/usr/bin:/usr/local/bin</string>
     </dict>
 	<key>Program</key>
-	<string>/Users/amarendra.kumar/.dotfiles/restic.backup.sh</string>
+	<string>/Users/amarendra.kumar/.dotfiles/borg.maintain.sh</string>
 	<key>StandardOutPath</key>
-  	<string>/Users/amarendra.kumar/Library/Logs/restic/restic--std-out-err.log</string>
+  	<string>/Users/amarendra.kumar/Library/Logs/borg/borg-m--std-out-err.log</string>
 	<key>StandardErrorPath</key>
-	<string>/Users/amarendra.kumar/Library/Logs/restic/restic--std-out-err.log</string>
+  	<string>/Users/amarendra.kumar/Library/Logs/borg/borg-m--std-out-err.log</string>
 	<key>StartCalendarInterval</key>
 	<array>
 		<dict>
 			<key>Hour</key>
-			<integer>8</integer>
+			<integer>11</integer>
+			<key>Minute</key>
+			<integer>30</integer>
+			<key>Weekday</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>Hour</key>
-			<integer>12</integer>
-		</dict>
-		<dict>
-			<key>Hour</key>
-			<integer>16</integer>
-		</dict>
-		<dict>
-			<key>Hour</key>
-			<integer>22</integer>
+			<integer>17</integer>
+			<key>Minute</key>
+			<integer>30</integer>
+			<key>Weekday</key>
+			<integer>4</integer>
 		</dict>
 	</array>
 	<key>Nice</key>

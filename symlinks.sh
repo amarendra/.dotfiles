@@ -46,3 +46,4 @@ ln -s ~/Dropbox/Config/Firefox/RES/current/store.json ~/Library/Application\ Sup
 # link launch agents
 ln -s ~/.dotfiles/LaunchAgents/amar.restic.backup.plist ~/Library/LaunchAgents/amar.restic.backup.plist
 ln -s ~/.dotfiles/LaunchAgents/amar.restic.maintenance.plist ~/Library/LaunchAgents/amar.restic.maintenance.plist
+ln -s ~/.dotfiles/LaunchAgents/amar.borg.backup.plist ~/Library/LaunchAgents/amar.borg.backup.plist

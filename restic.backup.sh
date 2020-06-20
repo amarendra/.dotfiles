@@ -2,7 +2,6 @@
 # sources environment varialbes including credentials
 source $HOME/Dropbox/Config/git-ignored/restic/.restic.env
 
-
 osascript -e 'display notification "Started." with title "Restic" subtitle "Backup script"'
 printf "RESTIC BACKUP SCRIPT STARTED AT $(date -R)\n\n" >> $RESTIC_BACKUP_LOG_FILE
 

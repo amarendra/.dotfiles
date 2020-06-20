@@ -12,7 +12,7 @@ borg create -x --verbose --progress --stats --show-rc \
 	--compression auto,zstd,9 \
 	--exclude-caches \
 	--patterns-from $BORG_PATTERNS_FILE \
-	::$BORG_LOCAL_HOSTNAME-$(date +"%d%m%Y%H%M") >> $BORG_BCAKUP_LOG_FILE
+	::$BORG_LOCAL_HOSTNAME-$(date +"%d%m%Y%H%M") 2>> $BORG_BCAKUP_LOG_FILE
 
 backup_exit_code=$?
 

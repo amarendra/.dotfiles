@@ -4,12 +4,12 @@ source $HOME/Dropbox/Config/git-ignored/borg/.borg.env
 osascript -e 'display notification "Started." with title "Borg" subtitle "Maintenance script"'
 printf "\nBorg maintenance script started. TIME: $(date -R)\n" >> $BORG_MAINT_LOG_FILE
 
-borg prune --list --show-rc \
-	--prefix '$BORG_LOCAL_HOSTNAME-'
+borg prune --verbose --list --show-rc \
+	--prefix ${BORG_LOCAL_HOSTNAME} \
     --keep-daily 7 \
     --keep-weekly 5 \
     --keep-monthly 12 \
-    --keep-yearly 3 >> $BORG_MAINT_LOG_FILE
+    --keep-yearly 3 2>> $BORG_MAINT_LOG_FILE
 
 prune_exit_code=$?
 printf "\nprune finished with exit code ${prune_exit_code}\n" >> $BORG_MAINT_LOG_FILE

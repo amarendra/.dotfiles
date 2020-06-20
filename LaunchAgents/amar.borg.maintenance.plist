@@ -10,7 +10,7 @@
       <string>/bin:/usr/bin:/usr/local/bin</string>
     </dict>
 	<key>Program</key>
-	<string>/Users/amarendra.kumar/.dotfiles/borg.maintain.sh</string>
+	<string>/Users/amarendra.kumar/.dotfiles/scripts/borg.maintain.sh</string>
 	<key>StandardOutPath</key>
   	<string>/Users/amarendra.kumar/Library/Logs/borg/borg-m-std-out-err.log</string>
 	<key>StandardErrorPath</key>

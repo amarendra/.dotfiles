@@ -10,7 +10,7 @@
       <string>/bin:/usr/bin:/usr/local/bin</string>
     </dict>
 	<key>Program</key>
-	<string>/Users/amarendra.kumar/.dotfiles/restic.backup.sh</string>
+	<string>/Users/amarendra.kumar/.dotfiles/scripts/restic.backup.sh</string>
 	<key>StandardOutPath</key>
   	<string>/Users/amarendra.kumar/Library/Logs/restic/restic-std-out-err.log</string>
 	<key>StandardErrorPath</key>

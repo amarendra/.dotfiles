@@ -12,9 +12,9 @@
 	<key>Program</key>
 	<string>/Users/amarendra.kumar/.dotfiles/borg.maintain.sh</string>
 	<key>StandardOutPath</key>
-  	<string>/Users/amarendra.kumar/Library/Logs/borg/borg-m--std-out-err.log</string>
+  	<string>/Users/amarendra.kumar/Library/Logs/borg/borg-m-std-out-err.log</string>
 	<key>StandardErrorPath</key>
-  	<string>/Users/amarendra.kumar/Library/Logs/borg/borg-m--std-out-err.log</string>
+  	<string>/Users/amarendra.kumar/Library/Logs/borg/borg-m-std-out-err.log</string>
 	<key>StartCalendarInterval</key>
 	<array>
 		<dict>

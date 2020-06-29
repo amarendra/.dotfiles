@@ -9,7 +9,7 @@ printf "\nBorg backup script started. TIME: $(date -R)" >> $BORG_BCAKUP_LOG_FILE
 
 borg create -x --verbose --progress --stats --show-rc \
 	--filter AME \
-	--compression auto,zstd,9 \
+	--compression auto,zstd,8 \
 	--exclude-caches \
 	--patterns-from $BORG_PATTERNS_FILE \
 	::$BORG_LOCAL_HOSTNAME-$(date +"%d%m%Y%H%M") 2>> $BORG_BCAKUP_LOG_FILE

@@ -13,7 +13,7 @@ restic --verbose forget --keep-last 10 \
 	--prune	>> $RESTIC_MAINT_LOG_FILE
 
 prune_exit_code=$?
-printf "\nprune finished with exit code ${prune_exit_code}\n" >> $RESTIC_MAINT_LOG_FILE
+printf "\nforget with prune finished with exit code ${prune_exit_code}\n" >> $RESTIC_MAINT_LOG_FILE
 
 # Checks the backup status. Once in a while run this without cache or "restic check --read-data".
 restic check --with-cache >> $RESTIC_MAINT_LOG_FILE

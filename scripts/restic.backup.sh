@@ -1,7 +1,7 @@
 #!/bin/bash
 source $HOME/Dropbox/Config/git-ignored/restic/.restic.env
 
-osascript -e 'display notification "Started." with title "Restic" subtitle "Backup script"'
+#osascript -e 'display notification "Started." with title "Restic" subtitle "Backup script"'
 printf "\nrestic backup script started. TIME: $(date -R)\n" >> $RESTIC_BACKUP_LOG_FILE
 
 # regain lock if needed
@@ -40,11 +40,10 @@ successful="without any issues."
 
 if [ $unlock_exit_code -ne 0 -o $backup_exit_code -ne 0 -o $check_exit_code -ne 0 -o $stats_exit_code -ne 0 -o $stats_raw__data_exit_code -ne 0 ]; then
 	successful="with issues!!!"
+	osascript -e 'display notification "Finished '"$successful"'" with title "Restic" subtitle "Backup script"'
 fi
 
 printf "\nRestic backup script finished ${successful} TIME: $(date -R)\n" >> $RESTIC_BACKUP_LOG_FILE
-osascript -e 'display notification "Finished '"$successful"'" with title "Restic" subtitle "Backup script"'
-
 printf "\n=======================================================\n\n" >> $RESTIC_BACKUP_LOG_FILE
 
 # todo: highest exit code among all 

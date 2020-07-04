@@ -1,7 +1,7 @@
 #!/bin/bash
 source $HOME/Dropbox/Config/git-ignored/borg/.borg.env
 
-osascript -e 'display notification "Started." with title "Borg" subtitle "Maintenance script"'
+#osascript -e 'display notification "Started." with title "Borg" subtitle "Maintenance script"'
 printf "\nBorg maintenance script started. TIME: $(date -R)\n" >> $BORG_MAINT_LOG_FILE
 
 borg prune --verbose --list --show-rc \
@@ -24,11 +24,10 @@ successful="without any issues."
 
 if [ $prune_exit_code -ne 0 ]; then
 	successful="with issues!!!"
+	osascript -e 'display notification "Finished '"$successful"'" with title "Borg" subtitle "Maintenance script"'
 fi
 
 printf "\nBorg maintenance script finished ${successful} TIME: $(date -R)" >> $BORG_MAINT_LOG_FILE
-osascript -e 'display notification "Finished '"$successful"'" with title "Borg" subtitle "Maintenance script"'
-
 printf "\n=======================================================\n\n" >> $BORG_MAINT_LOG_FILE
 
 exit $prune_exit_code

@@ -2,7 +2,7 @@
 # sources environment varialbes including credentials
 source $HOME/Dropbox/Config/git-ignored/restic/.restic.env
 
-osascript -e 'display notification "Started." with title "Restic" subtitle "Maintenance script"'
+#osascript -e 'display notification "Started." with title "Restic" subtitle "Maintenance script"'
 printf "\nRestic maintenance script started. TIME: $(date -R)\n" >> $RESTIC_MAINT_LOG_FILE
 
 restic --verbose forget --keep-last 10 \
@@ -39,11 +39,10 @@ successful="without any issues."
 
 if [ $prune_exit_code -ne 0 -o $check_exit_code -ne 0 -o $stats_exit_code -ne 0 -o $stats_raw__data_exit_code -ne 0 ]; then
 	successful="with issues!!!"
+	osascript -e 'display notification "Finished '"$successful"'" with title "Restic" subtitle "Maintenance script"'
 fi
 
 printf "\nRestic maintenance script finished ${successful} TIME: $(date -R)\n" >> $RESTIC_MAINT_LOG_FILE
-osascript -e 'display notification "Finished '"$successful"'" with title "Restic" subtitle "Maintenance script"'
-
 printf "\n=======================================================\n\n" >> $RESTIC_MAINT_LOG_FILE
 
 # todo: highest exit code among all 

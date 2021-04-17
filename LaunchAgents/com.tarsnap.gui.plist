@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Tarsnap GUI launchd script for running Tarsnap scheduled Jobs every
+     day at 10AM. Copy to appropriate path and load with:
+     $launchctl load ~/Library/LaunchAgents/com.tarsnap.gui.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.tarsnap.gui</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/Cellar/tarsnap-gui/1.0.2/Tarsnap.app/Contents/MacOS/Tarsnap</string>
+        <string>--jobs</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>11</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>WorkingDirectory</key>
+    <string>/Users/amar/Downloads/</string>
+    <key>StandardOutPath</key>
+    <string>/Users/amar/Library/Logs/tarsnap-gui.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/amar/Library/Logs/tarsnap-gui.log</string>
+</dict>
+</plist>
